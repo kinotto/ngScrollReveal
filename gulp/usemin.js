@@ -5,15 +5,11 @@ var minifyHtml = require('gulp-minify-html');
 var minifyCss = require('gulp-minify-css');
 var rev = require('gulp-rev');
 var config = require('./config');
+var rename = require("gulp-rename");
 
 gulp.task('usemin', function() {
-  return gulp.src('index.html')
-    .pipe(usemin({
-      css: [ minifyCss(), rev() ],
-      //html: [ minifyHtml({ empty: true }) ],  per ora html non minificato
-      js: [ uglify(), rev() ],
-      inlinejs: [ uglify() ],
-      inlinecss: [ minifyCss(), 'concat' ]
-    }))
+  return gulp.src('src/scrollReveal.js')
+    .pipe(uglify())
+    .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest(config.dist.app));
 });

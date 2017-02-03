@@ -1,8 +1,31 @@
 # ngScrollReveal
-angular scroll reveal wrapper
-still in development
+angular implementation of the javascript library scrollReveal.js
+
+STILL IN DEVELOPMENT
+
+
+Usage:
+
+
+Examples:
+
+
+
+Contribution:
+-clone the repository
+-create a feature branch 
+
+run with:
+
+>> gulp
+>> gulp dist (for the minification)
+
+
+
+
 
 Credit for ScrollReveal.js https://github.com/jlmakes/scrollreveal
+
 
 
 MIT License
