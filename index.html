@@ -1,0 +1,44 @@
+
+<html ng-app="ngScrollRevealExample">
+  <head>
+    <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </head>
+  <body ng-controller="mainController">
+
+   
+
+    
+    <script type="text/javascript" src="bower_components/scrollreveal/dist/scrollreveal.js"></script>
+    <script type="text/javascript" src="src/scrollReveal.js"></script>
+
+
+    <script type="text/javascript">
+      angular.module('ngScrollRevealExample')
+       .controller('mainController', function($scope, ScrollReveal){
+          $scope.options = {
+            origin: 'top',
+            distance : '150px',
+            delay: 30,
+            scale: 0.4, 
+            reset: true
+          }
+          ScrollReveal.reveal("#idTest", $scope.options);
+          //ng-scroll-reveal="{origin: 'top'}"
+          $scope.revealEl = function(){
+            ScrollReveal.reveal("#idTest", $scope.options);
+          }
+       })
+    </script>
+    <div  id="idTest" style="padding: 20px; border: 1px solid black">ciaone</div>
+    <button ng-click="revealEl()">replay</button>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div  id="idTest2" style="padding: 20px; border: 1px solid black">ciaone</div>
+    <!--<script type="text/javascript">
+      window.sr = ScrollReveal();
+      sr.reveal('#idTest');
+    </script>-->
+
+  </body>
+</html>

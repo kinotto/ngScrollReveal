@@ -1,0 +1,19 @@
+{
+  "name": "ngScrollReveal",
+  "description": "",
+  "main": "",
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.1",
+    "scrollreveal": "^3.3.2",
+    "angular-ui-router": "^0.4.2"
+  }
+}
