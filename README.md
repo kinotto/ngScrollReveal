@@ -17,14 +17,18 @@ Contribution:
 
 run with:
 
->> gulp
->> gulp dist (for the minification)
+> gulp
+
+> gulp dist (for the minification)
 
 
 
-
+<br/><br/><br/>
 
 Credit for ScrollReveal.js https://github.com/jlmakes/scrollreveal
+
+
+<br/><br/><br/>
 
 
 
