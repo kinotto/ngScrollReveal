@@ -23,7 +23,7 @@ angular.module('myModule', ['ngScrollReveal']);
 
 Two use cases are provided:
 
-- ###Service:the client is provided of a wrapper of the original library. Inject it in your component and you're ready
+- **Service**:the client is provided of a wrapper of the original library. Inject it in your component and you're ready
 to go. you can refer to the [original doc](https://github.com/jlmakes/scrollreveal) for the list of available api.
 
   ```javascript
@@ -35,7 +35,7 @@ to go. you can refer to the [original doc](https://github.com/jlmakes/scrollreve
   })
   ```
 
-- ###Directive: Using it as a directive is much more powerful, you simple have to decorate your DOM element with
+- **Directive**: Using it as a directive is much more powerful, you simple have to decorate your DOM element with
 the directive ng-scroll-reveal passing an object representing the [options](https://github.com/jlmakes/scrollreveal).
 In addition the user have the chance to execute a sequence of animation (adding a field 'sequence' to the above object)
 
