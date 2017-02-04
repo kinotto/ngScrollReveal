@@ -2,7 +2,7 @@
 ##Angular implementation of the famous javascript library [scrollReveal.js](https://github.com/jlmakes/scrollreveal)
 
 
-###1.Installation
+###1. Installation
 
 > bower install ngScrollReveal
 
@@ -16,74 +16,70 @@ load scripts following this order:
 and remember to add the module as a dependency:
 ```javascript
 angular.module('myModule', ['ngScrollReveal']);
-})
 ```
 
 
-###2.Usage:
+###2. Usage:
 
 Two use cases are provided:
 
-- Service:
-the client is provided of a wrapper of the original library. Inject it in your component and you're ready
-to go. you can refer to the ([original doc](https://github.com/jlmakes/scrollreveal)) for the list of available api.
+- **Service**:the client is provided of a wrapper of the original library. Inject it in your component and you're ready
+to go. you can refer to the [original doc](https://github.com/jlmakes/scrollreveal) for the list of available api.
 
-```javascript
-angular.module('myModule')
-  .controller('myCtrl', function(ScrollReveal){
-    ScrollReveal.reveal('.myClass', {duration: 300});
+  ```javascript
+  angular.module('myModule')
+    .controller('myCtrl', function(ScrollReveal){
+      ScrollReveal.reveal('.myClass', {duration: 300});
 
-  )}
-})
-```
+    )}
+  })
+  ```
 
-- Directive
-
-Using it as a directive is much more powerful, you simple have to decorate your DOM element with
+- **Directive**: Using it as a directive is much more powerful, you simple have to decorate your DOM element with
 the directive ng-scroll-reveal passing an object representing the [options](https://github.com/jlmakes/scrollreveal).
 In addition the user have the chance to execute a sequence of animation (adding a field 'sequence' to the above object)
-####A basic usage:
-```javascript
-options= {
-  origin: 'top',
-  duration: 300
-}
-```
-```html
-<div id="idTest" ng-scroll-reveal="options">Hello</div>
-```
 
-
-####Advanced Usage with sequenced animations:
-
-```javascript
-optionsSequence = {
-  origin: 'top',
-  duration: 300,
-  sequence: { //this is ignored from the original library
-    selector: 'myChildSelector',
-    interval: 300
+  ####A basic usage:
+  ```javascript
+  options= {
+    origin: 'top',
+    duration: 300
   }
-}
-```
-
-```html
-<div ng-scroll-reveal="optionsSequence">
-  <div class="myChildSelector" >Hello</div>
-  <div class="myChildSelector">Hello</div>
-  <div class="myChildSelector">Hello</div>
-  <div class="myChildSelector">Hello</div>
-</div>
-```
+  ```
+  ```html
+  <div id="idTest" ng-scroll-reveal="options">Hello</div>
+  ```
 
 
-###3.Examples:
+  ####Advanced Usage with sequenced animations:
+
+  ```javascript
+  optionsSequence = {
+    origin: 'top',
+    duration: 300,
+    sequence: {
+      selector: 'myChildSelector',
+      interval: 300
+    }
+  }
+  ```
+
+  ```html
+  <div ng-scroll-reveal="optionsSequence">
+    <div class="myChildSelector" >Hello</div>
+    <div class="myChildSelector">Hello</div>
+    <div class="myChildSelector">Hello</div>
+    <div class="myChildSelector">Hello</div>
+  </div>
+  ```
+
+
+###3. Examples:
 here is a jsfiddle with a list of working examples.
 
 
-###4.Contribution:
--clone the repository
--create a feature branch
+###4. Contribution:
+Feel free to contribute, any help is really appreciated :)
 
 
 run with:
