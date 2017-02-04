@@ -5,41 +5,51 @@ STILL IN DEVELOPMENT
 
 
 Usage:
+
 Two use cases are provided:
+
 1)Service:
 the client is provided of a wrapper of the original library. Inject it in your component and you're ready
 to go.
 
-> angular.module('myModule')
->  .controller('myCtrl', function(ScrollReveal){
->    ScrollReveal.reveal('.myClass', {duration: 300});
->
->  )}
->})
+```javascript
+angular.module('myModule')
+  .controller('myCtrl', function(ScrollReveal){
+    ScrollReveal.reveal('.myClass', {duration: 300});
+
+  )}
+})
+```
 
 2)Directive
-> <div id="idTest" ng-scroll-reveal="options" class="firstTest">Hello</div>
+
+```html
+<div id="idTest" ng-scroll-reveal="options" class="firstTest">Hello</div>
+```
 
 Using it as a directive is much more powerful, you simple have to decorate your DOM element with
 the directive ng-scroll-reveal passing an object representing the configuration (see the original library for the list of available options: https://github.com/jlmakes/scrollreveal)
 In addition the user have the chance to  execute a sequence of animation (adding a field 'sequence' to the above object)
 
->optionsSequence = {
->  origin: 'top',
->  duration: 300,
->  sequence: { //this is ignored from the original library
->    selector: 'myChildSelector',
->    interval: 300
->  }
->}
+```javascript
+optionsSequence = {
+  origin: 'top',
+  duration: 300,
+  sequence: { //this is ignored from the original library
+    selector: 'myChildSelector',
+    interval: 300
+  }
+}
+```
 
-><div ng-scroll-reveal="optionsSequence">
->  <div class="myChildSelector" >Hello</div>
->  <div class="myChildSelector">Hello</div>
->  <div class="myChildSelector">Hello</div>
->  <div class="myChildSelector">Hello</div>
-></div>
-
+```html
+<div ng-scroll-reveal="optionsSequence">
+  <div class="myChildSelector" >Hello</div>
+  <div class="myChildSelector">Hello</div>
+  <div class="myChildSelector">Hello</div>
+  <div class="myChildSelector">Hello</div>
+</div>
+```
 
 
 Examples:
