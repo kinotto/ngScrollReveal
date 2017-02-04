@@ -7,41 +7,68 @@
   </head>
   <body ng-controller="mainController">
 
-   
+
 
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <script type="text/javascript" src="bower_components/scrollreveal/dist/scrollreveal.js"></script>
-    <script type="text/javascript" src="src/scrollReveal.js"></script>
-    <!--<script type="text/javascript" src="build/scrollReveal.min.js"></script>-->
+    <script type="text/javascript" src="src/ngScrollReveal.js"></script>
+    <!--<script type="text/javascript" src="build/ngScrollReveal.min.js"></script>-->
 
     <script type="text/javascript">
       angular.module('ngScrollRevealExample')
-       .controller('mainController', function($scope, ScrollReveal){
+       .controller('mainController', function($scope, ScrollReveal, $timeout){
           $scope.options = {
-            origin: 'top',
+            origin: 'left',
             distance : '150px',
             delay: 30,
-            scale: 1, 
+            scale: 1,
+            duration: 1000,
             reset: true
           }
-          ScrollReveal.reveal("#idTest", $scope.options);
-          //
+          $scope.optionsSequence = {
+            origin: 'left',
+            distance : '150px',
+            delay: 30,
+            scale: 1,
+            duration: 2000,
+            reset: true,
+            sequence: {
+              selector: '',
+              interval: 500
+            }
+          }
+          $timeout(function(){
+            ScrollReveal.reveal(".fourthTest", {duration: 900}, 300);
+          })
           $scope.replay = function(){
             ScrollReveal.reveal("#idTest", $scope.options);
           }
        })
     </script>
     <h1>test 1</h1>
-    <div id="idTest" class="firstTest">ciaone</div>
-    <button ng-click="replay('#idTest')">replay</button>
-    
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    
+    <div class="myContainer">
+      <div id="idTest" ng-scroll-reveal="options" class="firstTest">Hello</div>
+      <button ng-click="replay('#idTest')">replay</button>
+    </div>
+
 
     <h1>test 2</h1>
-    <span id="#idTest2" ng-scroll-reveal="options" class="secondTest">ciaone</span>
-    <span ng-scroll-reveal="options" id="idTest" class="secondTest">ciaone</span>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="myContainer">
+      <div ng-scroll-reveal="options" class="secondTest">Hello</div>
+      <div ng-scroll-reveal="options" class="secondTest">Hello</div>
+    </div>
 
+    <h1>test 3</h1>
+    <div ng-scroll-reveal="optionsSequence" class="myContainer">
+      <div >Hello</div>
+      <div >Hello</div>
+      <div >Hello</div>
+      <div >Hello</div>
+    </div>
+
+    <h1>test 4</h1>
+    <div class="fourthTest">Hello</div>
+    <div class="fourthTest">Hello</div>
+    <div class="fourthTest">Hello</div>
   </body>
 </html>

@@ -1,8 +1,15 @@
 .firstTest{
-	padding: 20px; 
-	border: 1px solid black
+	padding: 20px;
+	border: 1px solid black;
 }
 .secondTest{
-	padding: 5px; 
-	border: 1px solid black
+	padding: 15px;
+	border: 1px solid black;
+}
+.thirdTest{
+	padding: 15px;
+	border: 1px solid black;
+}
+.myContainer{
+	margin-bottom: 300px;
 }

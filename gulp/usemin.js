@@ -8,7 +8,7 @@ var config = require('./config');
 var rename = require("gulp-rename");
 
 gulp.task('usemin', function() {
-  return gulp.src('src/scrollReveal.js')
+  return gulp.src('src/ngScrollReveal.js')
     .pipe(uglify())
     .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest(config.dist.app));

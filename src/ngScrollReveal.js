@@ -2,23 +2,24 @@
 	'use strict';
 	var moduleName = 'ngScrollReveal';
 	var scrollReveal = window.sr = ScrollReveal();
+	var sequenceNr = 0;
 	var revealFn = scrollReveal.reveal;
 	var restoreInlineStyle = function(elem){
-		var element = isDomElement(elem) ? elem : document.querySelector(elem);
-		var elemId = element.getAttribute('data-sr-id');
+		var element = isDomElement(elem) ? elem : (document.querySelector(elem) || null);
+		var elemId = element && element.getAttribute('data-sr-id');
 		if(elemId){
 			var styles = sr.store.elements[elemId].styles.inline;
 			element.setAttribute('style', styles);
 			element.removeAttribute('data-sr-id');
-		}	
-    }
-	scrollReveal.reveal = function(element, options){
+		}
+  }
+	scrollReveal.reveal = function(element, options, interval){
 		restoreInlineStyle(element); //allow replay of the effect on demand , eg. onclick
-		revealFn(element, options || {}); //original function preserved
+		revealFn(element, options || {}, interval); //original function preserved
 	}
 
 	var isObject = function(val) {
-	    if (val === null) { 
+	    if (val === null) {
 	    	return false;
 	    }
 	    return ( (typeof val === 'function') || (typeof val === 'object') );
@@ -38,37 +39,43 @@
 	  }
 	}
 	angular.module(moduleName, [])
-	.directive('ngScrollReveal', [function(){
+	.directive('ngScrollReveal', ['$timeout', function($timeout){
 
 		return {
 			restrict: 'A',
 			scope: {
-				options: '=ngScrollReveal',
-				isSequential: '@ngScrollRevealSequence' 
+				options: '=ngScrollReveal'
 			},
 			link: function(scope, element, attrs){
 				var opt = scope.options || {};
-
-				scrollReveal.reveal(element[0], opt);
+				var applySequence = function(childrenSelector){
+					var children = childrenSelector ?
+						 (element[0].querySelectorAll(childrenSelector) || []) :
+						 (element[0].children || []);
+					var sequenceClass = 'ngScrollRevealSequence'+sequenceNr;
+					for(var i = 0; i < children.length;  i++){
+						children[i].className += ' '+sequenceClass;
+					}
+					if(children.length > 0){
+						$timeout(function(){
+							scrollReveal.reveal('.' + sequenceClass, opt, opt.sequence.interval || 200);
+						})
+					}
+				}
+				if(opt.sequence){
+					applySequence(opt.sequence.selector);
+				} else{
+					$timeout(function(){
+						scrollReveal.reveal(element[0], opt);
+					})
+				}
 			}
 		}
 	}])
-	.directive('ngChild', [function(){
 
-		return {
-			restrict: 'A',
-			require: '^ngScrollReveal',
-			scope: {
-				child: '=ngChild'
-			},
-			link: function(scope, element, attrs){
-				//TODO TOGLIERE QUESTA DIRETTIVA
-			}
-		}
-	}])
 
 	.factory('ScrollReveal', [function(){
 		return scrollReveal;
 	}])
-	
+
 })(window.angular);
