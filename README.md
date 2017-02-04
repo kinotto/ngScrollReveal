@@ -1,16 +1,32 @@
 # ngScrollReveal
-angular implementation of the famous javascript library  [scrollReveal.js](https://github.com/jlmakes/scrollreveal) 
-
-STILL IN DEVELOPMENT
+##Angular implementation of the famous javascript library [scrollReveal.js](https://github.com/jlmakes/scrollreveal)
 
 
-Usage:
+###1.Installation
+
+> bower install ngScrollReveal
+
+
+load scripts following this order:
+```html
+<script type="text/javascript" src="bower_components/scrollreveal/dist/scrollreveal.js"></script>
+<script type="text/javascript" src="bower_components/ngScrollReveal/ngScrollReveal.min.js"></script>
+```
+
+and remember to add the module as a dependency:
+```javascript
+angular.module('myModule', ['ngScrollReveal']);
+})
+```
+
+
+###2.Usage:
 
 Two use cases are provided:
 
-1)Service:
+- Service:
 the client is provided of a wrapper of the original library. Inject it in your component and you're ready
-to go.
+to go. you can refer to the ([original doc](https://github.com/jlmakes/scrollreveal)) for the list of available api.
 
 ```javascript
 angular.module('myModule')
@@ -21,15 +37,24 @@ angular.module('myModule')
 })
 ```
 
-2)Directive
-
-```html
-<div id="idTest" ng-scroll-reveal="options" class="firstTest">Hello</div>
-```
+- Directive
 
 Using it as a directive is much more powerful, you simple have to decorate your DOM element with
-the directive ng-scroll-reveal passing an object representing the configuration (see the original library for the list of available options: https://github.com/jlmakes/scrollreveal)
-In addition the user have the chance to  execute a sequence of animation (adding a field 'sequence' to the above object)
+the directive ng-scroll-reveal passing an object representing the [options](https://github.com/jlmakes/scrollreveal).
+In addition the user have the chance to execute a sequence of animation (adding a field 'sequence' to the above object)
+####A basic usage:
+```javascript
+options= {
+  origin: 'top',
+  duration: 300
+}
+```
+```html
+<div id="idTest" ng-scroll-reveal="options">Hello</div>
+```
+
+
+####Advanced Usage with sequenced animations:
 
 ```javascript
 optionsSequence = {
@@ -52,16 +77,16 @@ optionsSequence = {
 ```
 
 
-Examples:
+###3.Examples:
 here is a jsfiddle with a list of working examples.
 
 
-Contribution:
+###4.Contribution:
 -clone the repository
 -create a feature branch
 
-run with:
 
+run with:
 
 >gulp
 >gulp dist (for the minification)
