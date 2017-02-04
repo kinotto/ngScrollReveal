@@ -1,9 +1,24 @@
+/**
+ * ngScrollReveal
+ * ------------
+ * Version : 1.0
+ * Website : www.karimabdelcadir.com
+ * Repo    : github.com/kinotto/ngScrollReveal
+ * Author  : Karim
+ */
+
 (function(angular){
 	'use strict';
 	var moduleName = 'ngScrollReveal';
 	var scrollReveal = window.sr = ScrollReveal();
 	var sequenceNr = 0;
 	var revealFn = scrollReveal.reveal;
+
+	/**
+   * Restore the inline style created in the element by the scrollReveal.js library
+	 * this logic allow a replay of the effect ondemand, for example on click. see the examples.
+   * @param {Object} [target]   Could be a DOM element or a selector.
+   */
 	var restoreInlineStyle = function(elem){
 		var element = isDomElement(elem) ? elem : (document.querySelector(elem) || null);
 		var elemId = element && element.getAttribute('data-sr-id');
@@ -13,6 +28,13 @@
 			element.removeAttribute('data-sr-id');
 		}
   }
+	/**
+   * restoreInlineStyle is called prior the reveal function to clean the element style that
+	 * could have been added from previous reveal.
+   * @param {Object} [target]   Could be a DOM element or a selector.
+	 * @param {Object} [options]  Reveal configuration.
+	 * @param {number} [interval]   the interval between sequence effects, could be null
+   */
 	scrollReveal.reveal = function(element, options, interval){
 		restoreInlineStyle(element); //allow replay of the effect on demand , eg. onclick
 		revealFn(element, options || {}, interval); //original function preserved
@@ -75,7 +97,7 @@
 
 
 	.factory('ScrollReveal', [function(){
-		return scrollReveal;
+		return scrollReveal; //wrapper of the original library
 	}])
 
 })(window.angular);

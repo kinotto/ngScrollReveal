@@ -5,6 +5,7 @@ var livereload = require('gulp-livereload');
 var requireDir = require('require-dir');
 var tasks = requireDir('gulp', {recurse: true});
 var util = require('gulp-util');
+var jsdoc = require("gulp-jsdoc");
 
 gulp.task('express', function() {
   var express = require('express');
@@ -17,7 +18,7 @@ gulp.task('express', function() {
 
 gulp.task('watcher', function() {
   gulp.src('index.html')
-    .pipe(livereload()); 
+    .pipe(livereload());
   /*gulp.src('*.js')
     .pipe(livereload());  */
 });
@@ -25,13 +26,17 @@ gulp.task('watcher', function() {
 gulp.task('watch', function() {
 
   gulp.watch('*.html',  {interval: 500 }, ['watcher']);
-  //gulp.watch('**/*.js', {interval: 500 }, ['watcher']); 
-  //gulp.watch('**/*.html', {interval: 500 }, ['watcher']); 
-  //gulp.watch('**/*.js', {interval: 500 }, ['watcher']); 
-  livereload.listen(); 
-});  
+  //gulp.watch('**/*.js', {interval: 500 }, ['watcher']);
+  //gulp.watch('**/*.html', {interval: 500 }, ['watcher']);
+  //gulp.watch('**/*.js', {interval: 500 }, ['watcher']);
+  livereload.listen();
+});
 
-gulp.task('default', ['watch','express'], function() {
+gulp.task('doc', function(){
+  
+})
+
+gulp.task('default', ['watch','express', 'doc'], function() {
 
 });
 
