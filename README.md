@@ -1,5 +1,5 @@
 # ngScrollReveal
-angular implementation of the famous javascript library scrollReveal.js
+angular implementation of the famous javascript library  [scrollReveal.js](https://github.com/jlmakes/scrollreveal) 
 
 STILL IN DEVELOPMENT
 
@@ -62,9 +62,9 @@ Contribution:
 
 run with:
 
-> gulp
 
-> gulp dist (for the minification)
+>gulp
+>gulp dist (for the minification)
 
 
 
