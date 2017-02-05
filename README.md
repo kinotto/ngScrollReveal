@@ -2,10 +2,10 @@
 
 <p align="center"> <img src="http://i.imgur.com/RgiL1zw.png" alt="no image" class="inline"/></p>
 
-<p align="center"> <img src="http://i.imgur.com/RwBUMv9.gif" alt="no image" class="inline"/></p>
+<!--<p align="center"> <img src="http://i.imgur.com/RwBUMv9.gif" alt="no image" class="inline"/></p>-->
 
+<p align="center">Angular implementation of the famous animation library <a href="https://github.com/jlmakes/scrollreveal">scrollReveal.js</a></p>
 
-##Angular implementation of the famous animation library [scrollReveal.js](https://github.com/jlmakes/scrollreveal)
 
 ###1. Installation
 
