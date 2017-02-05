@@ -4,10 +4,13 @@
 
 ###1. Installation
 
+
 > bower install ngScrollReveal
 
+<br/>
 
-load scripts following this order:
+Load scripts:
+
 ```html
 <script type="text/javascript" src="bower_components/scrollreveal/dist/scrollreveal.js"></script>
 <script type="text/javascript" src="bower_components/ngScrollReveal/ngScrollReveal.min.js"></script>
@@ -34,8 +37,7 @@ to go. you can refer to the [original doc](https://github.com/jlmakes/scrollreve
   })
   ```
 
-- **Directive**: using it as a directive is much more powerful, you simple have to decorate your DOM element with
-the directive ng-scroll-reveal passing an object representing the [options](https://github.com/jlmakes/scrollreveal).
+- **Directive**: using it as a directive is much more powerful, you simple have to decorate your DOM element with the directive ```ng-scroll-reveal``` passing an object representing the [options](https://github.com/jlmakes/scrollreveal).
 In addition the user have the chance to execute a sequence of animation (adding a field 'sequence' to the above object)
 
   ####A basic usage:
@@ -74,7 +76,7 @@ In addition the user have the chance to execute a sequence of animation (adding 
 
 
 ###3. Examples:
-here is a jsfiddle with a list of working examples.
+here is a link to a [plunkr](https://plnkr.co/edit/uBwOZf8OrQOfY31EAslM?p=preview) with a list of working examples.
 
 
 ###4. Contribution:
@@ -84,6 +86,7 @@ Feel free to contribute, any help is really appreciated :)
 run with:
 
 >gulp
+
 >gulp dist (for the minification)
 
 
