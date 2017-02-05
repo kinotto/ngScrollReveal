@@ -2,7 +2,7 @@
 ##Angular implementation of the famous animation library [scrollReveal.js](https://github.com/jlmakes/scrollreveal)
 
 
-<p align="center"> <img src="http://i.imgur.com/RgiL1zw.png" width="300" height="300" alt="no image" class="inline"/></p>
+<p align="center"> <img src="http://i.imgur.com/RgiL1zw.png" alt="no image" class="inline"/></p>
 
 
 
@@ -77,7 +77,7 @@ In addition the user have the chance to execute a sequence of animation (adding 
     <div class="myChildSelector">Hello</div>
   </div>
   ```
-<p align="center"> <img src="http://i.makeagif.com/media/2-05-2017/pBgPuj.gif" width="300" height="300" alt="no image" class="inline"/></p>
+<img src="http://i.makeagif.com/media/2-05-2017/pBgPuj.gif" width="300" height="300" alt="no image" class="inline"/>
 
 ###3. Examples:
 here is a link to a [plunkr](https://plnkr.co/edit/uBwOZf8OrQOfY31EAslM?p=preview) with a list of working examples.
