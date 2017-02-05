@@ -78,7 +78,7 @@ In addition the user have the chance to execute a sequence of animation (adding 
     <div class="myChildSelector">Hello</div>
   </div>
   ```
-<!--<img src="http://i.makeagif.com/media/2-05-2017/pBgPuj.gif" alt="no image" />-->
+<img src="http://im2.ezgif.com/tmp/ezgif.com-ceb31edc81.gif" alt="no image" />
 
 ###3. Examples:
 here is a link to a [plunkr](https://plnkr.co/edit/uBwOZf8OrQOfY31EAslM?p=preview) with a list of working examples.
