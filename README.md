@@ -2,7 +2,7 @@
 ##Angular implementation of the famous animation library [scrollReveal.js](https://github.com/jlmakes/scrollreveal)
 
 
-<p align="center"> <img src="http://media3.giphy.com/media/kEKcOWl8RMLde/giphy.gif" width="300" height="300" alt="no image" class="inline"/></p>
+<p align="center"> <img src="http://i.makeagif.com/media/2-05-2017/R1tM4K.gif" width="300" height="300" alt="no image" class="inline"/></p>
 
 ###1. Installation
 
