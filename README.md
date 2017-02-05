@@ -5,7 +5,7 @@
 ###1. Installation
 
 
-> bower install ngScrollReveal
+> bower install --save ngScrollReveal
 
 <br/>
 
@@ -67,7 +67,7 @@ In addition the user have the chance to execute a sequence of animation (adding 
 
   ```html
   <div ng-scroll-reveal="optionsSequence">
-    <div class="myChildSelector" >Hello</div>
+    <div class="myChildSelector">Hello</div>
     <div class="myChildSelector">Hello</div>
     <div class="myChildSelector">Hello</div>
     <div class="myChildSelector">Hello</div>
@@ -100,6 +100,7 @@ Credit for ScrollReveal.js https://github.com/jlmakes/scrollreveal
 
 
 
+###5. License:
 MIT License
 
 Copyright (c) 2017 kinotto

@@ -15,8 +15,9 @@
 	var revealFn = scrollReveal.reveal;
 
 	/**
-   * Restore the inline style created in the element by the scrollReveal.js library
-	 * this logic allow a replay of the effect ondemand, for example on click. see the examples.
+   * Restore the inline style created in the element by the scrollReveal.js
+	 * library this logic allow a replay of the effect ondemand,
+	 * for example on click, see the examples.
    * @param {Object} [target]   Could be a DOM element or a selector.
    */
 	var restoreInlineStyle = function(elem){
@@ -28,15 +29,16 @@
 			element.removeAttribute('data-sr-id');
 		}
   }
+
 	/**
-   * restoreInlineStyle is called prior the reveal function to clean the element style that
-	 * could have been added from previous reveal.
+   * restoreInlineStyle is called prior the reveal function to clean the element
+	 * style that could have been added from previous reveal.
    * @param {Object} [target]   Could be a DOM element or a selector.
 	 * @param {Object} [options]  Reveal configuration.
-	 * @param {number} [interval]   the interval between sequence effects, could be null
+	 * @param {number} [interval]  the interval between sequence effects.
    */
 	scrollReveal.reveal = function(element, options, interval){
-		restoreInlineStyle(element); //allow replay of the effect on demand , eg. onclick
+		restoreInlineStyle(element);
 		revealFn(element, options || {}, interval); //original function preserved
 	}
 
@@ -80,7 +82,9 @@
 					}
 					if(children.length > 0){
 						$timeout(function(){
-							scrollReveal.reveal('.' + sequenceClass, opt, opt.sequence.interval || 200);
+							scrollReveal.reveal('.' + sequenceClass, opt,
+								opt.sequence.interval || 200);
+							sequenceNr++;
 						})
 					}
 				}
