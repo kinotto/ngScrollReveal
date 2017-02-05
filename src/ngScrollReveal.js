@@ -15,11 +15,11 @@
 	var revealFn = scrollReveal.reveal;
 
 	/**
-   * Restore the inline style created in the element by the scrollReveal.js
+   	 * Restore the inline style created in the element by the scrollReveal.js
 	 * library this logic allow a replay of the effect ondemand,
 	 * for example on click, see the examples.
-   * @param {Object} [target]   Could be a DOM element or a selector.
-   */
+   	 * @param {Object} [target]   Could be a DOM element or a selector.
+   	 */
 	var restoreInlineStyle = function(elem){
 		var element = isDomElement(elem) ? elem : (document.querySelector(elem) || null);
 		var elemId = element && element.getAttribute('data-sr-id');
@@ -28,15 +28,15 @@
 			element.setAttribute('style', styles);
 			element.removeAttribute('data-sr-id');
 		}
-  }
+	}
 
 	/**
-   * restoreInlineStyle is called prior the reveal function to clean the element
+   	 * restoreInlineStyle is called prior the reveal function to clean the element
 	 * style that could have been added from previous reveal.
-   * @param {Object} [target]   Could be a DOM element or a selector.
+     	 * @param {Object} [target]   Could be a DOM element or a selector.
 	 * @param {Object} [options]  Reveal configuration.
 	 * @param {number} [interval]  the interval between sequence effects.
-   */
+   	*/
 	scrollReveal.reveal = function(element, options, interval){
 		restoreInlineStyle(element);
 		revealFn(element, options || {}, interval); //original function preserved
