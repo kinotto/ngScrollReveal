@@ -1,5 +1,5 @@
 # ngScrollReveal
-##Angular implementation of the famous javascript library [scrollReveal.js](https://github.com/jlmakes/scrollreveal)
+##Angular implementation of the famous animation library [scrollReveal.js](https://github.com/jlmakes/scrollreveal)
 
 
 <p align="center"> <img src="http://media3.giphy.com/media/kEKcOWl8RMLde/giphy.gif" width="300" height="300" alt="no image" class="inline"/></p>
