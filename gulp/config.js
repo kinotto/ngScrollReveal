@@ -1,6 +1,6 @@
 module.exports = {
 	dist: {
-		app: 'build'
+		app: 'dist'
 	},
 	src: {
 		lib: 'src/scrollReveal.js'
