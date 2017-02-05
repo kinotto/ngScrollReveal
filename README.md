@@ -4,7 +4,7 @@
 
 <!--<p align="center"> <img src="http://i.imgur.com/RgiL1zw.png" alt="no image" class="inline"/></p>-->
 
-<p align="center"> <img src="http://i.makeagif.com/media/2-05-2017/pBgPuj.gif" alt="no image" class="inline"/></p>
+<p align="center"> <img src="https://media.giphy.com/media/FbNpBwteiX7pe/giphy.gif" alt="no image" class="inline"/></p>
 
 ###1. Installation
 
