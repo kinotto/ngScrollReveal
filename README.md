@@ -1,10 +1,11 @@
-# ngScrollReveal
-##Angular implementation of the famous animation library [scrollReveal.js](https://github.com/jlmakes/scrollreveal)
 
 
-<!--<p align="center"> <img src="http://i.imgur.com/RgiL1zw.png" alt="no image" class="inline"/></p>-->
+<p align="center"> <img src="http://i.imgur.com/RgiL1zw.png" alt="no image" class="inline"/></p>
 
 <p align="center"> <img src="http://i.imgur.com/RwBUMv9.gif" alt="no image" class="inline"/></p>
+
+
+##Angular implementation of the famous animation library [scrollReveal.js](https://github.com/jlmakes/scrollreveal)
 
 ###1. Installation
 
