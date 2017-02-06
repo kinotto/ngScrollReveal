@@ -81,7 +81,7 @@ In addition the user have the chance to execute a sequence of animation (adding 
 <img src="http://i.imgur.com/Do3Ht57.gif" alt="no image" />
 
 ###3. Examples:
-here is a link to a [plunkr](https://plnkr.co/edit/uBwOZf8OrQOfY31EAslM?p=preview) with a list of working examples.
+here is a [**link**](https://plnkr.co/edit/uBwOZf8OrQOfY31EAslM?p=preview) to a plunkr with a list of working examples.
 
 
 ###4. Contribution:
