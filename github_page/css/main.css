@@ -1,0 +1,72 @@
+/*Font*/
+@font-face {
+    font-family: Helvetica;
+    src: url("font/Helvetica-Condensed.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Helvetica;
+    font-weight: bold;
+    src: url("font/Helvetica-Condensed.otf") format("opentype");
+}
+
+body{
+  font-family: serif;
+  font-size: 16px;
+}
+/* Block */
+
+.cptHeader{}
+
+/* elements */
+.cptHeader__angularLogo{
+  background-image: url('../img/angular-logo.png');
+  width: 100%;
+}
+
+.cptHome: {}
+
+.cptHome__background{
+  height: 400px;
+  width: 100%;
+  position: relative;
+}
+
+.cptHome__background_el1{
+  background-image: url('../img/1.jpg');
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.cptHome__background_el2{
+  background-image: url('../img/2.jpg');
+   background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.cptHome__section1{
+  padding: 40px;
+  background: #f0f0f0;
+  font-size: 25px;
+}
+
+.cptHome__section2{
+  padding: 40px;
+  font-size: 25px;
+}
+
+.cptHome__section2__box{
+  background-image: url('../img/square.png');
+  background-size: cover;
+  height: 64px;
+  width: 64px;
+}
+
+.cptHome__section3{
+  padding: 40px;
+  background: #f0f0f0;
+  font-size: 25px;
+}
