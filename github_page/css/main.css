@@ -102,7 +102,7 @@ body{
   padding: 30px;
 }
 .slice--third--text{
-  padding: 30px;
+  padding: 50px;
 }
 .slice--third--text--box{
   background-image: url('../img/square.png');
@@ -153,14 +153,19 @@ body{
 
 /*component text*/
 .text{
-  font-family: Lato;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-align: center;
 }
 .text--title{
-  font-size: 50px;
+  font-family: Oswald;
+  font-size: 70px;
   text-decoration: underline;
   color: white;
-  text-align: center;
+}
+.text--desc{
+  font-family: Lato;
+  font-size: 25px;
+  color: white;
 }
