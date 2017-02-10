@@ -1,24 +1,20 @@
-/*Font*/
-@font-face {
-    font-family: Helvetica;
-    src: url("font/Helvetica-Condensed.otf") format("opentype");
-}
-
-@font-face {
-    font-family: Helvetica;
-    font-weight: bold;
-    src: url("font/Helvetica-Condensed.otf") format("opentype");
-}
-
+@import url('profiles.css');
 body{
-  font-family: serif;
+  font-family: Helvetica;
   font-size: 16px;
+}
+.cptHeader{}
+
+.cptHeader__angularLogo{
+  background-image: url('../img/angular-logo.png');
+  width: 100%;
 }
 /* Block */
 
+/*
 .cptHeader{}
 
-/* elements */
+
 .cptHeader__angularLogo{
   background-image: url('../img/angular-logo.png');
   width: 100%;
@@ -27,7 +23,7 @@ body{
 .cptHome: {}
 
 .cptHome__background{
-  height: 400px;
+  height: 500px;
   width: 100%;
   position: relative;
 }
@@ -46,7 +42,20 @@ body{
   height: 100%;
   position: absolute;
 }
-
+.cptHome__background_el3{
+  background-image: url('../img/3.jpg');
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.cptHome__background_el4{
+  background-image: url('../img/4.jpg');
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
 .cptHome__section1{
   padding: 40px;
   background: #f0f0f0;
@@ -57,7 +66,9 @@ body{
   padding: 40px;
   font-size: 25px;
 }
-
+.cptHome__section2_text{
+  padding: 30px;
+}
 .cptHome__section2__box{
   background-image: url('../img/square.png');
   background-size: cover;
@@ -69,4 +80,87 @@ body{
   padding: 40px;
   background: #f0f0f0;
   font-size: 25px;
+}
+*/
+
+/* slice component */
+.slice {}
+.slice--first {
+  position: relative;
+  height: 400px;
+}
+.slice--second{
+  padding: 40px;
+  background: #f0f0f0;
+  font-size: 25px;
+}
+.slice--third{
+  padding: 40px;
+  font-size: 25px;
+}
+.slice--third--text{
+  padding: 30px;
+}
+.slice--third--text{
+  padding: 30px;
+}
+.slice--third--text--box{
+  background-image: url('../img/square.png');
+  background-size: cover;
+  height: 64px;
+  width: 64px;
+}
+.slice--fourth{
+  padding: 40px;
+  background: #f0f0f0;
+  font-size: 25px;
+}
+.slice__content{
+  position: relative;
+  z-index: 2;
+}
+.slice__content--logo{
+  background-image: url('../img/github-logo.png');
+  background-size: cover;
+  z-index: 3;
+}
+.slice__bg{
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+}
+.slice__bgElem{
+  position: absolute;
+  background-size: cover;
+  width: inherit;
+  height: inherit;
+}
+.slice__bgElem--el1{
+  background-image: url('../img/1.jpg');
+}
+.slice__bgElem--el2{
+  background-image: url('../img/2.jpg');
+}
+.slice__bgElem--el3{
+  background-image: url('../img/3.jpg');
+}
+.slice__bgElem--el4{
+  background-image: url('../img/4.jpg');
+}
+
+
+
+/*component text*/
+.text{
+  font-family: Lato;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.text--title{
+  font-size: 50px;
+  text-decoration: underline;
+  color: white;
+  text-align: center;
 }

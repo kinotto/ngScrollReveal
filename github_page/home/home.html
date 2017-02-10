@@ -1,43 +1,83 @@
-<div class="row cptHome">
-  <div ng-scroll-reveal="optionsBG" class="cptHome__background">
-      <div  class="cptHome__background_el1"></div>
-      <div  class="cptHome__background_el2"></div>
-  </div>
-</div>
 
 <!--Section 1 -->
-<div class="row" ng-scroll-reveal="optionsS1">
-  <div class="col-xs-12">
-    <div class="cptHome__section1 text-center">
-     <p>Angular Scroll reveal is the implementation of a famous javascript <a href="https://github.com/jlmakes/scrollreveal"> animation library </a> 
-     it's essentially a wrapper of the functionality provided by the library.</p>
-
-
-    </div>
+<div class="slice slice--first">
+  <div class="slice__content">
+      <div class="col-sm-12">
+        <h1 class="text text--title" ng-scroll-reveal="optionsBGContent">Angular Scroll Reveal</h1>
+        <!--<span class="slice__content--logo"></span>-->
+      </div>
+  </div>
+  <div ng-scroll-reveal="optionsBG" class="slice__bg">
+      <div  class="slice__bgElem slice__bgElem--el1"></div>
+      <div  class="slice__bgElem slice__bgElem--el2"></div>
+      <div  class="slice__bgElem slice__bgElem--el3"></div>
   </div>
 </div>
 
+
+
 <!--Section 2 -->
-<div class="row" ng-scroll-reveal="optionsS2">
-  <div class="col-xs-12">
-    <div class="cptHome__section2 text-center">
-     <p>you can do almost any animation with this library with a little effort</p>
-    <div ng-scroll-reveal="optionsS2_1_box" class="col-xs-6">
-      <div class="col-xs-4 cptHome__section2__box" ng-repeat="i in counter" ></div>
-    </div>
-     <div ng-scroll-reveal="optionsS2_2_box" class="col-xs-6">
-        <div class="col-xs-4 cptHome__section2__box" ng-repeat="i in counter" ></div>
-     </div>
+<div class="slice slice--second">
+  <div class="row" ng-scroll-reveal="optionsS1">
+    <div class="col-sm-12">
+      <div class="text-center">
+       <p>Angular Scroll reveal is the implementation of a famous javascript <a href="https://github.com/jlmakes/scrollreveal" 
+        target="_blank"> animation library </a> 
+       it's essentially a wrapper of those functionalities.</p>
+
+      </div>
     </div>
   </div>
 </div>
 
 <!--Section 3 -->
-<div class="row" ng-scroll-reveal="optionsS3">
-  <div class="col-xs-12">
-    <div class="cptHome__section3 text-center">
-     <p>lorem ipsum</p>
+<div class="slice slice--third">
+  <div class="row" ng-scroll-reveal="optionsS2">
+    <div class="col-sm-12">
+      <div class="text-center">
+       <p class="slice--third--text">Any animation is possible with this library with a little effort</p>
+      <!--<div ng-scroll-reveal="optionsS2_1_box" class="col-sm-6">
+        <div class="col-sm-4 slice--third--text--box" ng-repeat="i in counter" ></div>
+      </div>
+       <div ng-scroll-reveal="optionsS2_2_box" class="col-sm-6">
+          <div class="col-sm-4 slice--third--text--box" ng-repeat="i in counter" ></div>
+       </div>-->
+       <div ng-scroll-reveal="optionsS2_1_box" class="col-sm-12">
+          <div class="profile profile--img1 col-sm-2"></div>
+          <div class="profile profile--img2 col-sm-2"></div>
+          <div class="profile profile--img3 col-sm-2"></div>
+          <div class="profile profile--img4 col-sm-2"></div>
+          <div class="profile profile--img5 col-sm-2"></div>
+          <div class="profile profile--img6 col-sm-2"></div>
+          <div class="profile profile--img7 col-sm-2"></div>
+          <div class="profile profile--img8 col-sm-2"></div>
+          <div class="profile profile--img9 col-sm-2"></div>
+          <div class="profile profile--img10 col-sm-2"></div>
+          <div class="profile profile--img11 col-sm-2"></div>
+          <div class="profile profile--img12 col-sm-2"></div>
+          <div class="profile profile--img13 col-sm-2"></div>
+          <div class="profile profile--img14 col-sm-2"></div>
+          <div class="profile profile--img15 col-sm-2"></div>
+          <div class="profile profile--img16 col-sm-2"></div>
+          <div class="profile profile--img1 col-sm-2"></div>
+          <div class="profile profile--img2 col-sm-2"></div>
+          <div class="profile profile--img3 col-sm-2"></div>
+      </div>
 
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Section 4 -->
+<div class="slice slice--fourth">
+  <div class="row" ng-scroll-reveal="optionsS3">
+    <div class="col-sm-12">
+      <div class="text-center">
+       <p>lLorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione. È sopravvissuto non solo a più di cinque secoli, ma anche al passaggio alla videoimpaginazione, pervenendoci sostanzialmente inalterato. Fu reso popolare, negli anni ’60, con la diffusione dei fogli di caratteri trasferibili “Letraset”, che contenevano passaggi del Lorem Ipsum, e più recentemente da software di impaginazione come Aldus PageMaker, che includeva versioni del Lorem Ipsum.
+       </p>
+
+      </div>
     </div>
   </div>
 </div>

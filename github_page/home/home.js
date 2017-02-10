@@ -28,8 +28,8 @@ angular.module('ngScrollRevealPage')
     var zoomBox = {
       distance: '0px',
       sequence: {
-        selector: '.cptHome__section2__box',
-        interval: 200
+        selector: '.profile',
+        interval: 100
       }
     }
     var zoomRotate = {
@@ -37,8 +37,8 @@ angular.module('ngScrollRevealPage')
       rotate: {z: 720},
       scale: 0.1,
       sequence: {
-        selector: '.cptHome__section2__box',
-        interval: 200
+        selector: '.slice--third--text--box',
+        interval: 100
       }
     }
     var scrollRevealRight = {
@@ -46,10 +46,17 @@ angular.module('ngScrollRevealPage')
       distance: '200px',
       scale: 1
     }
+    var scrollRevealUp = {
+      origin: 'top',
+      distance: '200px',
+      rotate: {z: 10}
+    }
 
     $scope.counter = [];
     (function(){for(var i = 0; i < 40; i++){$scope.counter.push(i);}})() 
+
     $scope.optionsBG = angular.extend(angular.extend({}, baseConfig), fade);
+    $scope.optionsBGContent = angular.extend(angular.extend({}, baseConfig), scrollRevealUp);
     $scope.optionsS1 = angular.extend(angular.extend({}, baseConfig), scrollRevealLeft);
     $scope.optionsS2 = angular.extend(angular.extend({}, baseConfig), zoom);
     $scope.optionsS3 = angular.extend(angular.extend({}, baseConfig), scrollRevealRight);
