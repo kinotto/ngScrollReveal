@@ -28,7 +28,7 @@ angular.module('ngScrollRevealPage')
     var zoomBox = {
       distance: '0px',
       sequence: {
-        selector: '.profile',
+        selector: '.figure',
         interval: 100
       }
     }

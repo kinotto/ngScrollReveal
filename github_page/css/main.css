@@ -1,134 +1,58 @@
-@import url('profiles.css');
-body{
-  font-family: Helvetica;
-  font-size: 16px;
-}
-.cptHeader{}
-
-.cptHeader__angularLogo{
-  background-image: url('../img/angular-logo.png');
-  width: 100%;
-}
-/* Block */
-
 /*
-.cptHeader{}
-
-
-.cptHeader__angularLogo{
-  background-image: url('../img/angular-logo.png');
-  width: 100%;
-}
-
-.cptHome: {}
-
-.cptHome__background{
-  height: 500px;
-  width: 100%;
-  position: relative;
-}
-
-.cptHome__background_el1{
-  background-image: url('../img/1.jpg');
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-}
-.cptHome__background_el2{
-  background-image: url('../img/2.jpg');
-   background-size: cover;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-}
-.cptHome__background_el3{
-  background-image: url('../img/3.jpg');
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-}
-.cptHome__background_el4{
-  background-image: url('../img/4.jpg');
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-}
-.cptHome__section1{
-  padding: 40px;
-  background: #f0f0f0;
-  font-size: 25px;
-}
-
-.cptHome__section2{
-  padding: 40px;
-  font-size: 25px;
-}
-.cptHome__section2_text{
-  padding: 30px;
-}
-.cptHome__section2__box{
-  background-image: url('../img/square.png');
-  background-size: cover;
-  height: 64px;
-  width: 64px;
-}
-
-.cptHome__section3{
-  padding: 40px;
-  background: #f0f0f0;
-  font-size: 25px;
-}
+*
+* GENERAL
+*
 */
 
-/* slice component */
-.slice {}
+body{
+  font-family: Lato, sans-serif;
+  font-size: 20px;
+}
+
+a:link {color: white;text-decoration: underline};
+
+/*
+*
+* COMPONENTS
+*
+*/
+
+
+/* slice */
+.slice {
+  overflow: hidden;
+}
 .slice--first {
   position: relative;
-  height: 400px;
+  height: 100vh;
 }
 .slice--second{
   padding: 40px;
   background: #f0f0f0;
-  font-size: 25px;
 }
 .slice--third{
-  padding: 40px;
-  font-size: 25px;
-}
-.slice--third--text{
-  padding: 30px;
-}
-.slice--third--text{
-  padding: 50px;
-}
-.slice--third--text--box{
-  background-image: url('../img/square.png');
-  background-size: cover;
-  height: 64px;
-  width: 64px;
+  padding: 100px 0;
 }
 .slice--fourth{
-  padding: 40px;
-  background: #f0f0f0;
-  font-size: 25px;
+  padding: 50px;
+  background: #202b33;
+  color: white;
 }
 .slice__content{
   position: relative;
   z-index: 2;
 }
-.slice__content--logo{
-  background-image: url('../img/github-logo.png');
-  background-size: cover;
-  z-index: 3;
+.slice--first .slice__content {
+  top:50%;
+  transform: translateY(-50%);
+  position: absolute;
 }
 .slice__bg{
   position: absolute;
-
   width: 100%;
   height: 100%;
+  top: 0;
+  left: 0;
 }
 .slice__bgElem{
   position: absolute;
@@ -149,23 +73,44 @@ body{
   background-image: url('../img/4.jpg');
 }
 
-
-
-/*component text*/
+/* text */
 .text{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  text-align: center;
 }
 .text--title{
   font-family: Oswald;
-  font-size: 70px;
+  font-size: 60px;
   text-decoration: underline;
   color: white;
+  text-transform: uppercase;
+  margin: 0 0 20px;
 }
+
 .text--desc{
   font-family: Lato;
   font-size: 25px;
   color: white;
 }
+
+/* figure */
+.figure{
+  display: inline-block;
+  border: 1px solid #ccc;
+}
+
+
+
+/*
+*
+* TRUMPS
+*
+*/
+
+.inlineblock-reset {
+  font-size: 0;
+}
+
+
+
