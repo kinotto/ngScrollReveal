@@ -100,7 +100,7 @@ run with:
 
 <br/><br/><br/>
 
-Credit for ScrollReveal.js https://github.com/jlmakes/scrollreveal
+Credit for scrollReveal.js to @jlmakes
 
 
 <br/><br/><br/>
