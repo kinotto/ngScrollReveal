@@ -71,7 +71,7 @@
         options: '=ngScrollReveal'
       },
       link: function(scope, element, attrs){
-      
+
         var opt = scope.options || {};
         var applySequence = function(childrenSelector){
           var children = childrenSelector ?
@@ -81,19 +81,19 @@
           for(var i = 0; i < children.length;  i++){
             children[i].className += ' '+sequenceClass;
           }
-          if(children.length > 0){ 
-                scrollReveal.reveal('.' + sequenceClass, opt, opt.sequence.interval || 200);              
+          if(children.length > 0){
+                scrollReveal.reveal('.' + sequenceClass, opt, opt.sequence.interval || 200);
               sequenceNr++;
           }
         }
         if(opt.sequence){
-          element.css('visibility', 'hidden');
-          $timeout(function(){ //wait dom compilation to be completed
+          element.css('visibility', 'hidden'); //avoid flashy effects on the element during the animation
+          $timeout(function(){ //wait dom rendering
             applySequence(opt.sequence.selector);
           })
         } else{
            element.css('visibility', 'hidden');
-           $timeout(function(){ //wait dom compilation to be completed
+           $timeout(function(){ //wait dom rendering
               scrollReveal.reveal(element[0], opt);
             })
         }

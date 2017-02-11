@@ -63,7 +63,7 @@
     }
   }
   angular.module(moduleName, [])
-  .directive('ngScrollReveal', ['$timeout', function($timeout){
+  .directive('ngScrollReveal', ['$timeout', '$compile', function($timeout, $compile){
 
     return {
       restrict: 'A',
@@ -71,6 +71,7 @@
         options: '=ngScrollReveal'
       },
       link: function(scope, element, attrs){
+
         var opt = scope.options || {};
         var applySequence = function(childrenSelector){
           var children = childrenSelector ?
@@ -81,16 +82,20 @@
             children[i].className += ' '+sequenceClass;
           }
           if(children.length > 0){
-              scrollReveal.reveal('.' + sequenceClass, opt, opt.sequence.interval || 200);
+                scrollReveal.reveal('.' + sequenceClass, opt, opt.sequence.interval || 200);
               sequenceNr++;
           }
         }
         if(opt.sequence){
-          applySequence(opt.sequence.selector);
-        } else{
-          $timeout(function(){
-            scrollReveal.reveal(element[0], opt);
+          element.css('visibility', 'hidden'); //avoid flashy effects on the element during the animation
+          $timeout(function(){ //wait dom rendering
+            applySequence(opt.sequence.selector);
           })
+        } else{
+           element.css('visibility', 'hidden');
+           $timeout(function(){ //wait dom rendering
+              scrollReveal.reveal(element[0], opt);
+            })
         }
       }
     }
