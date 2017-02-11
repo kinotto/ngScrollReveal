@@ -18,6 +18,12 @@ angular.module('ngScrollRevealPage')
         interval:1000
       }
     }
+    var fade2 = {
+      distance: '0px',
+      reset: false,
+      opacity: 0,
+      scale: 2
+    }
     var scrollRevealLeft = {
       origin: 'left',
       distance: '200px'
@@ -35,11 +41,7 @@ angular.module('ngScrollRevealPage')
     var zoomRotate = {
       distance: '0px',
       rotate: {z: 720},
-      scale: 0.1,
-      sequence: {
-        selector: '.slice--third--text--box',
-        interval: 100
-      }
+      scale: 0.1
     }
     var scrollRevealRight = {
       origin: 'right',
@@ -53,7 +55,7 @@ angular.module('ngScrollRevealPage')
     }
 
     $scope.counter = [];
-    (function(){for(var i = 0; i < 40; i++){$scope.counter.push(i);}})() 
+    (function(){for(var i = 0; i < 40; i++){$scope.counter.push(i);}})()
 
     $scope.optionsBG = angular.extend(angular.extend({}, baseConfig), fade);
     $scope.optionsBGContent = angular.extend(angular.extend({}, baseConfig), scrollRevealUp);
@@ -61,8 +63,8 @@ angular.module('ngScrollRevealPage')
     $scope.optionsS2 = angular.extend(angular.extend({}, baseConfig), zoom);
     $scope.optionsS3 = angular.extend(angular.extend({}, baseConfig), scrollRevealRight);
     $scope.optionsS2_1_box = angular.extend(angular.extend({}, baseConfig), zoomBox);
-    $scope.optionsS2_2_box = angular.extend(angular.extend({}, baseConfig), zoomRotate);
-    //$scope.optionsBG2 = angular.extend(angular.extend({}, baseConfig), {origin: 'left'});
+    $scope.options_logo = angular.extend(angular.extend({}, baseConfig), zoomRotate);
+    $scope.options_logo_text = angular.extend(angular.extend({}, baseConfig), fade2);
 })
 .directive('checkActive', function(){
   return {
@@ -83,9 +85,9 @@ angular.module('ngScrollRevealPage')
     link: function(scope, element, attrs){
         $(document).click(function (event) {
           var clickover = $(event.target);
-          var $navbar = $(".navbar-collapse");               
+          var $navbar = $(".navbar-collapse");
           var _opened = $navbar.hasClass("in");
-          if (_opened === true && !clickover.hasClass("navbar-toggle")) {      
+          if (_opened === true && !clickover.hasClass("navbar-toggle")) {
               $navbar.collapse('hide');
           }
       });
