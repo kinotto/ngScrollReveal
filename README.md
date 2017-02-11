@@ -1,6 +1,6 @@
 
 
-<p align="center"> <img src="http://i.imgur.com/RgiL1zw.png" alt="no image" class="inline"/></p>
+<p align="center"> <a href="https://kinotto.github.io/ngScrollReveal/github_page"><img src="http://i.imgur.com/RgiL1zw.png" alt="no image" class="inline"/></a></p>
 
 <!--<p align="center"> <img src="http://i.imgur.com/RwBUMv9.gif" alt="no image" class="inline"/></p>-->
 
@@ -86,6 +86,9 @@ here is a [**link**](https://plnkr.co/edit/uBwOZf8OrQOfY31EAslM?p=preview) to a 
 
 ###4. Contribution:
 Feel free to contribute, any help is really appreciated :)
+
+###5. Contribution:
+Github page [**here**](https://kinotto.github.io/ngScrollReveal/github_page)
 
 
 run with:
