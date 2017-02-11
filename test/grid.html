@@ -1,0 +1,55 @@
+<style>
+  .column{
+   float: left;
+   width: 70px;
+   height: 70px;
+   border: 1px solid #607D8B;
+   overflow: hidden;
+  }
+
+  .row{
+    width: 68px;
+    height: 25px;
+    border: 1px solid red;
+  }
+  .containerdivNewLine { clear: both; float: left; display: block; position: relative; }
+  .myImg1{
+    background-size: cover;
+    background-image: url('test/goku.png')
+  }
+  .myImg2{
+    background-size: cover;
+    background-image: url('test/homer.png')
+  }
+  .myImg3{
+    background-size: cover;
+    background-image: url('test/myAvatar.png')
+  }
+  .center-block {
+    top: 30%;
+    left: 30%;
+    transform: translate3d(-50%,-50%, 0);
+    position: absolute;
+  }
+
+</style>
+
+<div class="center-block">
+  <div ng-scroll-reveal="optionsSequence" class="containerdivNewLine">
+  <div class="column myImg1"></div>
+  <div class="column myImg2"></div>
+  <div class="column myImg3"></div>
+  </div>
+
+  <div ng-scroll-reveal="optionsSequence" class="containerdivNewLine">
+  <div class="column myImg2"></div>
+  <div class="column myImg1"></div>
+  <div class="column myImg3"></div>
+  </div>
+
+  <div ng-scroll-reveal="optionsSequence" class="containerdivNewLine">
+  <div class="column myImg1"></div>
+  <div class="column myImg3"></div>
+  <div class="column myImg2"></div>
+  </div>
+</div>
