@@ -15,8 +15,8 @@
   var revealFn = scrollReveal.reveal;
 
   /**
-   * Restore the inline style created in the element by the scrollReveal.js
-   * library this logic allow a replay of the effect ondemand,
+   * Restore the inline style of an element using the sr map object of the scrollReveal.js  library
+   * this logic allow a replay of the effect ondemand that otherwise is not achievable.
    * for example on click, see the examples.
    * @param {Object} [target]   Could be a DOM element or a selector.
    */
@@ -82,7 +82,7 @@
             children[i].className += ' '+sequenceClass;
           }
           if(children.length > 0){
-                scrollReveal.reveal('.' + sequenceClass, opt, opt.sequence.interval || 200);
+              scrollReveal.reveal('.' + sequenceClass, opt, opt.sequence.interval || 200);
               sequenceNr++;
           }
         }
