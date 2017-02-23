@@ -116,7 +116,7 @@ angular.module('ngScrollRevealPage')
   return {
     restrict: 'A',
     link: function($scope, element, attrs){
-      $timeout(function(){
+
       var preloadIMG = function (url) {
         var deffered = $q.defer();
         var image = new Image();
@@ -136,26 +136,26 @@ angular.module('ngScrollRevealPage')
       }
 
       var images =[
-        preloadIMG('../img/1.jpg'),
-        preloadIMG('../img/2.jpg'),
-        preloadIMG('../img/3.jpg'),
-        preloadIMG('../img/4.jpg'),
-        preloadIMG('../img/profiles/1.jpg'),
-        preloadIMG('../img/profiles/2.jpg'),
-        preloadIMG('../img/profiles/3.jpg'),
-        preloadIMG('../img/profiles/4.jpg'),
-        preloadIMG('../img/profiles/5.jpg'),
-        preloadIMG('../img/profiles/6.jpg'),
-        preloadIMG('../img/profiles/7.jpg'),
-        preloadIMG('../img/profiles/8.jpg'),
-        preloadIMG('../img/profiles/9.jpg'),
-        preloadIMG('../img/profiles/10.jpg'),
-        preloadIMG('../img/profiles/11.jpg'),
-        preloadIMG('../img/profiles/12.jpg'),
-        preloadIMG('../img/profiles/13.jpg'),
-        preloadIMG('../img/profiles/14.jpg'),
-        preloadIMG('../img/profiles/15.jpg'),
-        preloadIMG('../img/profiles/16.jpg'),
+        preloadIMG('img/1.jpg'),
+        preloadIMG('img/2.jpg'),
+        preloadIMG('img/3.jpg'),
+        preloadIMG('img/4.jpg'),
+        preloadIMG('img/profiles/1.jpg'),
+        preloadIMG('img/profiles/2.jpg'),
+        preloadIMG('img/profiles/3.jpg'),
+        preloadIMG('img/profiles/4.jpg'),
+        preloadIMG('img/profiles/5.jpg'),
+        preloadIMG('img/profiles/6.jpg'),
+        preloadIMG('img/profiles/7.jpg'),
+        preloadIMG('img/profiles/8.jpg'),
+        preloadIMG('img/profiles/9.jpg'),
+        preloadIMG('img/profiles/10.jpg'),
+        preloadIMG('img/profiles/11.jpg'),
+        preloadIMG('img/profiles/12.jpg'),
+        preloadIMG('img/profiles/13.jpg'),
+        preloadIMG('img/profiles/14.jpg'),
+        preloadIMG('img/profiles/15.jpg'),
+        preloadIMG('img/profiles/16.jpg'),
       ]
 
       $q.all(images).then(function(res){
@@ -168,7 +168,7 @@ angular.module('ngScrollRevealPage')
           $scope.$parent.showLoader = false;
         },300);
       })
-      })
+
     }
   }
 }]);
