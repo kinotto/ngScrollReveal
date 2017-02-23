@@ -116,7 +116,7 @@ angular.module('ngScrollRevealPage')
   return {
     restrict: 'A',
     link: function($scope, element, attrs){
-      $scope.$evalAsync(function(){
+      $timeout(function(){
       var preloadIMG = function (url) {
         var deffered = $q.defer();
         var image = new Image();
