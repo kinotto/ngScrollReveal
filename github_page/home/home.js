@@ -116,12 +116,13 @@ angular.module('ngScrollRevealPage')
   return {
     restrict: 'A',
     link: function($scope, element, attrs){
+      $scope.$evalAsync(function(){
       var preloadIMG = function (url) {
         var deffered = $q.defer();
         var image = new Image();
         image.src = url;
         if (image.complete) {
-          deffered.resolve('resolved1');
+          deffered.resolve('resolved');
         } else {
           image.addEventListener('load', function() {
             deffered.resolve('resolved');
@@ -167,7 +168,7 @@ angular.module('ngScrollRevealPage')
           $scope.$parent.showLoader = false;
         },300);
       })
-
+      })
     }
   }
 }]);
