@@ -7,7 +7,7 @@
 <p align="center">Angular implementation of the famous animation library <a href="https://github.com/jlmakes/scrollreveal">scrollReveal.js</a></p>
 
 
-###1. Installation
+### 1. Installation
 
 
 > bower install --save ngScrollReveal
@@ -26,7 +26,7 @@ angular.module('myModule', ['ngScrollReveal']);
 ```
 
 
-###2. Usage:
+### 2. Usage:
 
 Two use cases are provided:
 
@@ -80,12 +80,12 @@ In addition the user have the chance to execute a sequence of animation (adding 
   ```
 <img src="http://i.imgur.com/Do3Ht57.gif" alt="no image" />
 
-###3. Examples:
+### 3. Examples:
 * Github page made using the directive [**here**](https://kinotto.github.io/ngScrollReveal/github_page)
 * here is a [**link**](https://plnkr.co/edit/uBwOZf8OrQOfY31EAslM?p=preview) to a plunkr with a list of working examples.
 
 
-###4. Contribution:
+### 4. Contribution:
 Feel free to contribute, any help is really appreciated :)
 
 
@@ -106,7 +106,7 @@ Credit for scrollReveal.js to @jlmakes
 
 
 
-###5. License:
+### 5. License:
 MIT License
 
 Copyright (c) 2017 kinotto
