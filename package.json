@@ -3,16 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
-  "dependencies": {
+  "devDependencies": {
     "del": "^2.2.2",
     "gulp": "^3.9.0",
     "gulp-build": "^0.5.3",
     "gulp-jsdoc": "^0.1.5",
     "gulp-open": "^1.0.0",
     "gulp-rename": "^1.2.2",
-    "gulp-serve": "^1.0.0"
-  },
-  "devDependencies": {
+    "gulp-serve": "^1.0.0",
     "connect-livereload": "^0.5.4",
     "express": "^4.13.3",
     "gulp": "^3.9.0",
