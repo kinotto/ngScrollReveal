@@ -1,6 +1,5 @@
 {
   "name": "ngScrollReveal",
-  "version": "1.0.1",
   "homepage": "https://github.com/kinotto/ngScrollReveal",
   "description": "angular wrapper for the native js library scrollReveal.js",
   "authors": [
