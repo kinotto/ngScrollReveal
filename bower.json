@@ -1,7 +1,7 @@
 {
   "name": "ngScrollReveal",
-  "version": "1.0",
-  "homepage": "www.karimabdelcadir.com",
+  "version": "1.0.1",
+  "homepage": "https://github.com/kinotto/ngScrollReveal",
   "description": "angular wrapper for the native js library scrollReveal.js",
   "authors": [
     "Karim Abdelcadir <kinotto88@yahoo.it>"
