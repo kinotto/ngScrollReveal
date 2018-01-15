@@ -45,7 +45,7 @@ to go. you can refer to the [original doc](https://github.com/jlmakes/scrollreve
 - **Directive**: using it as a directive is much more powerful, you simple have to decorate your DOM element with the directive ```ng-scroll-reveal``` passing an object representing the [options](https://github.com/jlmakes/scrollreveal).
 In addition the user have the chance to execute a sequence of animation (adding a field 'sequence' to the above object)
 
-  ####A basic usage:
+  #### A basic usage:
   ```javascript
   options= {
     origin: 'top',
@@ -57,7 +57,7 @@ In addition the user have the chance to execute a sequence of animation (adding 
   ```
 
 
-  ####Advanced Usage with sequenced animations:
+  #### Advanced Usage with sequenced animations:
 
   ```javascript
   optionsSequence = {
