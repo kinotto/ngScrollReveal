@@ -1,9 +1,5 @@
 
 
-![Alt Text](https://thumbs.gfycat.com/SereneTidyCrownofthornsstarfish-size_restricted.gif)
-
-<!--<p align="center"> <img src="http://i.imgur.com/RwBUMv9.gif" alt="no image" class="inline"/></p>-->
-
 <p align="center">Angular implementation of the famous animation library <a href="https://github.com/jlmakes/scrollreveal">scrollReveal.js</a></p>
 
 
