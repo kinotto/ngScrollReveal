@@ -1,6 +1,7 @@
 
-![img](https://thumbs.gfycat.com/PreciousSadEwe-size_restricted.gif)
-
+<p align="center">
+<img src="https://thumbs.gfycat.com/PreciousSadEwe-size_restricted.gif" />
+</p>
 <p align="center">Angular implementation of the famous animation library <a href="https://github.com/jlmakes/scrollreveal">scrollReveal.js</a></p>
 
 
