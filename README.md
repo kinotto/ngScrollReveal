@@ -1,4 +1,5 @@
 
+![img](https://thumbs.gfycat.com/PreciousSadEwe-size_restricted.gif)
 
 <p align="center">Angular implementation of the famous animation library <a href="https://github.com/jlmakes/scrollreveal">scrollReveal.js</a></p>
 
