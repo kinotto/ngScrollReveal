@@ -1,11 +1,6 @@
 
 <p align="center">Angular implementation of <a href="https://github.com/jlmakes/scrollreveal">scrollReveal.js</a></p>
 
-<p align="center">
-<img src="https://thumbs.gfycat.com/PreciousSadEwe-size_restricted.gif" />
-</p>
-
-
 
 ### 1. Installation
 
@@ -24,6 +19,9 @@ and remember to add the module as a dependency:
 ```javascript
 angular.module('myModule', ['ngScrollReveal']);
 ```
+
+
+<img src="https://thumbs.gfycat.com/PreciousSadEwe-size_restricted.gif" />
 
 
 ### 2. Usage:
