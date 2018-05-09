@@ -5,7 +5,7 @@
 ### 1. Installation
 
 
-> bower install --save ngScrollReveal
+`bower install --save ngScrollReveal`
 
 <br/>
 
